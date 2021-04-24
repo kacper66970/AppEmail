@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+</head>
+<body>
+<form action="/registry" th:action="@{/registry}" method="post" th:object="${user}" >
+    <br>
+    <h1 class="text-center">Registration </h1>
+    <br>
+<!--    <div class="form-group row">-->
+<!--        <label class="col-md-4 col-form-label text-center">Full Name:</label>-->
+<!--        <div class="col-md-6">-->
+<!--            <input type="text" th:field="*{name}" class="form-control" >-->
+<!--        </div>-->
+<!--    </div><br>-->
+
+    <div class="form-group row">
+        <label class="col-md-4 col-form-label text-center">E-Mail Address:</label>
+        <div class="col-md-6">
+            <input type="email"  th:field="*{username}" class="form-control" >
+        </div>
+    </div><br>
+
+    <div class="form-group row">
+        <label class="col-md-4 col-form-label text-center">Password:</label>
+        <div class="col-md-6">
+            <input type="password" th:field="*{password}"class="form-control">
+        </div>
+    </div><br>
+
+<!--    <div class="form-group row">-->
+<!--        <label class="col-md-4 col-form-label text-center">Host email:</label>-->
+<!--        <div class="col-md-6">-->
+<!--            <input type="text" th:field="*{hostEmail}"  class="form-control">-->
+<!--        </div>-->
+<!--    </div><br>-->
+
+<!--    <div class="form-group row">-->
+<!--        <label class="col-md-4 col-form-label text-center">Port email:</label>-->
+<!--        <div class="col-md-6">-->
+<!--            <input type="text" th:field="*{portEmail}" class="form-control">-->
+<!--        </div>-->
+<!--    </div><br>-->
+
+    <div class="col-md-6 offset-md-4">
+        <button type="submit" class="btn btn-primary">
+            Register
+        </button>
+    </div>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+</body>
+</html>
